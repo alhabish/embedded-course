@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p class="meta">{{ page.date | date: "%F" }}</p>
+{% if page.last_edit %}<div><i>آخر تحديث كان في <span dir="ltr">{{ page.last_edit | date: "%F" }}</div></i></p>{% endif %}
+
+<!--<div class="post">{{ content }}</div>-->
+
+<!-- from https://github.com/cstack/db_tutorial -->
+
+
+      {% for post in site.posts | sort: 'index' %}
+          {% if post.url == page.url %}
+              {% assign is_post = true %}
+              {% assign post_index0 = forloop.index0 %}
+              {% assign post_index1 = forloop.index %}
+          {% endif %}
+      {% endfor %}
+      {% for post in site.posts | sort: 'index' %}
+          {% if post_index0 == forloop.index %}
+              {% assign prev_post = post %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+              {% assign next_post = post %}
+          {% endif %}
+      {% endfor %}
+
+    <hr>
+      {% if prev_post %}
+          <a class="prev" href="{{site.baseurl}}{{ prev_post.url }}">{{prev_post.title}}</a> <br>
+      {% endif %}
+      {% if next_post %}
+          <a class="next" href="{{site.baseurl}}{{ next_post.url }}">{{next_post.title}}</a> <br>
+      {% endif %}
+    <br>
+    <hr>
+
+    <p>{{ content }}</p>
+
+    <hr>
+      {% if prev_post %}
+          <a class="prev" href="{{site.baseurl}}{{ prev_post.url }}">{{prev_post.title}}</a> <br>
+      {% endif %}
+      {% if next_post %}
+          <a class="next" href="{{site.baseurl}}{{ next_post.url }}">{{next_post.title}}</a> <br>
+      {% endif %}
+    <br>
+    <hr>
+
+<br>
+
+{% comment %}{% include comments.html %}{% endcomment %}

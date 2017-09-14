@@ -1,0 +1,73 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+/* -------------------------------------------------- 
+   sidebar styles
+-----------------------------------------------------*/
+aside {
+	padding: 0 1em 0;
+}
+aside h3 {
+	color: #4d4d4d;
+	font-size: 1.4em;
+	margin-top: 1em;
+	margin-bottom: .4em;
+}
+aside p {
+	margin-left: 1em;
+}
+aside ul {
+	list-style: none;
+	padding: 0;
+	margin:0;
+	margin-left: 1em;
+}
+aside li {
+	margin-bottom: 0.5em;
+}
+.social {
+	display: flex;
+	justify-content: space-around;
+}
+.social a {
+	text-indent: -9000em;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+.github {
+	background: url(../images/sidebar/github.svg) no-repeat;
+}
+.fb {
+	background: url(../images/sidebar/facebook.svg) no-repeat;
+}
+.linked {
+	background: url(../images/sidebar/linkedin.svg) no-repeat;
+}
+.twitter {
+	background: url(../images/sidebar/twitter.svg) no-repeat;
+}
+.mail {
+	background: url(../images/sidebar/mail.svg) no-repeat;
+}
+.rss {
+	background: url(../images/sidebar/rss.svg) no-repeat;
+}
+
+a.prev {
+  float: left;
+}
+
+a.prev:after {
+    content: " >"
+}
+
+a.next {
+  float: right;
+}
+
+a.next:before {
+  content: "< "
+}

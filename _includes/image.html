@@ -1,0 +1,9 @@
+<table>
+<caption align="bottom">{{ include.description }}</caption>
+<tr>
+    <td style="text-align:center; align:center">
+        <img src="{{site.url}}/{{include.url}}" alt="{{ include.description }}" 
+             {% if include.width %}style="width:{{include.width}}; height:{{include.height}}"{% endif %}  />
+    </td>
+</tr>
+</table>
