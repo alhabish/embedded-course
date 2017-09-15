@@ -4,6 +4,7 @@ title: "مقدمة"
 date: 2017-09-10
 lang: ar-SA
 index: 1
+comments: true
 ---
 
 So you just got your [Raspberry Pi][rasp-pi] and want to get started but
