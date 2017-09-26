@@ -71,3 +71,18 @@ a.next {
 a.next:before {
   content: "< "
 }
+
+.note {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #333;
+    background-color: #E6E6FA;
+    border-top: 0.1em solid #e1edf1;
+    border-bottom: 0.1em solid #e1edf1;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}

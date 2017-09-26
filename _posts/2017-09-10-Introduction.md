@@ -7,47 +7,42 @@ index: 1
 comments: true
 ---
 
-So you just got your [Raspberry Pi][rasp-pi] and want to get started but
-remembered you don't have an extra keyboard, mouse, or even a spare
-monitor to actually get something done?  Well, that's my case where I
-only have my laptop available (nope, I don't own a TV).
+من الممكن إعتبار الأنظمة المدمجة بأنها جميع أنظمة الحاسب الآلي ماعدا تلك المصنوعة للإستخدامات العامة والمتعددة general purpose كأجهزة الحاسب المنزلي وأجهزة اللابتوب حيث أنها تؤدي مهمة محددة specific purpose تم تطويرها من أجلها ولا يمكن، أو يصعب، تغييرها بعد ذلك. وعادة ما تكون هذه الأنظمة مدمجة أو متضمنة في نظام ميكانيكي أو كهربائي أكبر ومتحكمة به.  ويستفاد من هذه الأنظمة في الكثير من الصناعات والإلكترونيات والتي تشمل، وليست حصراً عليها فقط، الأجهزة الطبية، الأجهزة المنزلية، الألعاب، أنظمة الاتصالات، السيارات ... الخ. 
 
-Luckily there's a way around: the latest Debian Wheezy has SSH enabled
-by default and you can just SSH into your pi once you're done! Here's
-how to go about it:
+### []()خصائص الأنظمة المدمجة
+لهذه الأنظمة عدة خصائص نذكر منها:
+* مصممة لتنفيذ مهمة معينة وغرض واحد ويتم تنفيذ برنامجها بشكل مستمر ومتكرر
+* مصممة للإستهلاك القليل للطاقة 
+* مصممة للتعامل مع البيئة المحيطة حيث تحتوي على حساسات sensors لتلمس ما يحدث من حولها وقياس بعض الخصائص في البيئة المحيطة، و محركات actuators للتنفيذ والتأثير على ما حولها بناءاً على هذه المعطيات
+* لا يوجد لها في العادة واجهة للتعامل المباشر مع المستخدم وفي حالة وجودها فإنها تكون مبسطة للغاية
+
+### []()المتحكمات Microcontrollers
+أحد مكونات هذه الأنظمة هو المتحكم microcontroller والذي يعتبر نظام حاسب آلي مصغر ويتكون من الأجزاء التالية:
+* المعالج CPU
+* الذاكرة العشوائية RAM والمستخدمة لحفظ البيانات المؤقته volatile بمعنى انها تُمسح إن أعدنا تشغيل النظام 
+* ذاكرة القراءة أو التخزين ROM والتي تستخدم لحفظ البرنامج والبيانات الثابتة constant data. وهذه الذاكرة non-volatile بمعنى انها تبقى حتى وإن لم تتوفر الطاقة للنظام
+* طرفيات للمدخلات والخرجات I/O peripherals
+* اتساع ذاكرة الوصول السريع registers، فهناك أنواع مثل 8bit، 16bit، 32bit، 64bit ... وهي تعني أن الذاكرة تحتمل حجم بيانات بهذه السعة، وإجمالاً، فإنه كلما زادت السعة زاد حجم البيانت التي يمكن التعامل معها في نفس المدة.
+* المنافذ التسلسلية Serial ports 
+* المؤقت Timer
+* سرعة الساعة Clock speed، وبشكل عام، كلما زادت سرعة الساعة كلما أمكن تنفيذ أوامر أكثر في مدة أقل
+* المحول التماثلي الرقمي Analog to Digital Converter (ADC)
+* المحول الرقمي التماثلي Digital to Analog Converter (DAC)
+
+وسأقوم بشرح هذه الأجزاء بالتفصيل في مقالات قادمة بإذن الله
+
+### []()إختيار المتحكم المناسب لهذا الكورس
+ألخاصية الأولى التي ينبغي النظر اليها عند إختيار المتحكم هو إختيار الهيكلة ISA المناسبة. أمثلة عليها تشمل 8051، PIC، AVR، MSP430 و ARM Cortex M. وقد تم إختيار الهيكلة الأخيرة حيث أنها تعتبر الأكثر إنتشاراً خاصة  تلك من نوع الـ 32bit. وبعد حصرها على الهيكلة المناسبة ننظر الى ما يلي:
+* سرعة المعالج
+* حجم الذاكرة العشوائية RAM وذاكرة القراءة أو التخزين ROM 
+* أنواع الـ IO Pins المتوفره في المتحكم، وأذكر منها I2C، UART، SPI، GPIO و USB
+* كمية الطاقة التي يستهلكها المتحكم
+بنائاً على هذه المعطيات سيتضح لنا فيما بعد بإذن الله أن TM4C123 Tiva LaunchPad مناسبة جداً وتحقق أهم الإشتراطات
+
+### []()شراء المتحكم
+يمكن شراء المتحكم من عدة مصادر، ومنها:
+* http://www.ti.com/tool/EK-TM4C123GXL
+* http://www.newark.com/texas-instruments/ek-tm4c123gxl/eval-board-tm4c123g-tiva-c-launchpad/dp/73W9275
+* http://uk.farnell.com/texas-instruments/ek-tm4c123gxl/tm4c123g-launchpad-tiva-c-eval/dp/2314937
 
 
-* Download the latest version of [Raspbian][download-rasp-pi].  At the
-  time of this writing, it was [2013-12-20-wheezy][wheezy-torrent].
-
-* Insert your sd-card, find out its location, and unmount it:  
-  `diskutil list`  
-  `diskutil unmountDisk /dev/<sdcard-location>`
-
-* Unzip the file and burn the image (.img) you just downloaded. Don't
-  worry if it takes a longe time, depending on the speed of your sdcard,
-  it may take anywhere between 20 minutes and 2 hours.  
-  `sudo dd bs=1m if=<your-file.img>.img of=/dev/<sdcard-location>`  
-
-* Boot your Pi and search for its IP address so you can SSH into it:  
-  `arp -a`
-
-* SSH into your brand new raspbian:  
-  `ssh pi@<domain-name | ip-address>`
-
-* Run the configuration tool just to make sure you have good defaults:  
-  `raspi-config`
-
-
-That's it!  Now you can go enjoy [your raspberry pi][buy-rasp-pi] via
-SSH or VNC.
-
-
-[rasp-pi]: http://www.raspberrypi.org/
-  "Go to Raspberry Pi website"
-[download-rasp-pi]: http://downloads.raspberrypi.org/raspbian_latest.torrent
-  "Download the latest version of Raspbian"
-[wheezy-torrent]: /files/2013-12-20-wheezy-raspbian.zip.torrent
-  "Download Wheezy for Raspberry Pi via torrent"
-[buy-rasp-pi]: http://www.amazon.com/gp/product/B009SQQF9C/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B009SQQF9C&linkCode=as2&tag=andersonvom-20
-  "Buy a Raspberry Pi on Amazon.com"
