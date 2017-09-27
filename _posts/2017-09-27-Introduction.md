@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "مقدمة"
-date: 2017-09-10
+title: "مقدمة في الأنظمة المدمجة"
+date: 2017-09-27
 lang: ar-SA
 index: 1
 comments: true
@@ -32,17 +32,16 @@ comments: true
 وسأقوم بشرح هذه الأجزاء بالتفصيل في مقالات قادمة بإذن الله
 
 ### []()إختيار المتحكم المناسب لهذا الكورس
-ألخاصية الأولى التي ينبغي النظر اليها عند إختيار المتحكم هو إختيار الهيكلة ISA المناسبة. أمثلة عليها تشمل 8051، PIC، AVR، MSP430 و ARM Cortex M. وقد تم إختيار الهيكلة الأخيرة حيث أنها تعتبر الأكثر إنتشاراً خاصة  تلك من نوع الـ 32bit. وبعد حصرها على الهيكلة المناسبة ننظر الى ما يلي:
+الخاصية الأولى التي ينبغي النظر اليها عند إختيار المتحكم هو إختيار الهيكلة instruction set architecture (ISA)  المناسبة. أمثلة عليها تشمل 8051، PIC، AVR، MSP430 و ARM Cortex M. وقد تم إختيار الهيكلة الأخيرة حيث أنها تعتبر الأكثر إنتشاراً خاصة  تلك من نوع الـ 32bit. وبعد حصرها على الهيكلة المناسبة ننظر الى ما يلي:
 * سرعة المعالج
 * حجم الذاكرة العشوائية RAM وذاكرة القراءة أو التخزين ROM 
 * أنواع الـ IO Pins المتوفره في المتحكم، وأذكر منها I2C، UART، SPI، GPIO و USB
 * كمية الطاقة التي يستهلكها المتحكم
+
 بنائاً على هذه المعطيات سيتضح لنا فيما بعد بإذن الله أن TM4C123 Tiva LaunchPad مناسبة جداً وتحقق أهم الإشتراطات
 
 ### []()شراء المتحكم
 يمكن شراء المتحكم من عدة مصادر، ومنها:
-* http://www.ti.com/tool/EK-TM4C123GXL
-* http://www.newark.com/texas-instruments/ek-tm4c123gxl/eval-board-tm4c123g-tiva-c-launchpad/dp/73W9275
-* http://uk.farnell.com/texas-instruments/ek-tm4c123gxl/tm4c123g-launchpad-tiva-c-eval/dp/2314937
-
-
+* [Texas Instruments](http://www.ti.com/tool/EK-TM4C123GXL)
+* [Newark](http://www.newark.com/texas-instruments/ek-tm4c123gxl/eval-board-tm4c123g-tiva-c-launchpad/dp/73W9275)
+* [Farnell](http://uk.farnell.com/texas-instruments/ek-tm4c123gxl/tm4c123g-launchpad-tiva-c-eval/dp/2314937)
