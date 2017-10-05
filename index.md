@@ -11,7 +11,7 @@ title: البداية
 
 
 <!--{% include image.html url="assets/images/index/launchpad-tivac.png" description="tm4c123gh6pm" width="50%" height="40%" %}-->
-{% include image.html url="assets/images/index/launchpad-tivac.png" description="TM4C123 Tiva LaunchPad" %}
+{% include image.html url="assets/files/index/launchpad-tivac.png" description="TM4C123 Tiva LaunchPad" %}
 
 <!--![tm4c123gh6pm](/assets/images/index/launchpad-tivac.png)-->
 <!--![tm4c123gh6pm](/assets/images/index/launchpad-tivac.png){:class="img-responsive"}-->
