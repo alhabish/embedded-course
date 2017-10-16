@@ -26,8 +26,8 @@ comments: true
 * المنافذ التسلسلية Serial ports 
 * المؤقت Timer
 * سرعة الساعة Clock speed، وبشكل عام، كلما زادت سرعة الساعة كلما أمكن تنفيذ أوامر أكثر في مدة أقل
-* المحول التماثلي الرقمي Analog to Digital Converter (ADC)
-* المحول الرقمي التماثلي Digital to Analog Converter (DAC)
+* المحول التماثلي الرقمي Analog to Digital Converter - ADC
+* المحول الرقمي التماثلي Digital to Analog Converter - DAC
 
 وسأقوم بشرح هذه الأجزاء بالتفصيل في مقالات قادمة بإذن الله
 

@@ -72,12 +72,23 @@ a.next:before {
   content: "< "
 }
 
-.note {
+.post_ending_note {
     display: block;
     margin-top: 50px;
     padding: 10px 20px;
     color: #333;
     background-color: #E6E6FA;
+    border-top: 0.1em solid #e1edf1;
+    border-bottom: 0.1em solid #e1edf1;
+}
+
+.note {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    color: #333;
+    background-color: #ffffb3;
     border-top: 0.1em solid #e1edf1;
     border-bottom: 0.1em solid #e1edf1;
 }
