@@ -93,6 +93,19 @@ a.next:before {
     border-bottom: 0.1em solid #e1edf1;
 }
 
+.rule {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    color: black;
+    background-color: #ABEBC6;
+    border-top: 0.1em solid #e1edf1;
+    border-bottom: 0.1em solid #e1edf1;
+    font-weight:bold;
+    text-align: right;
+}
+
 p {
     text-align: justify;
     text-justify: inter-word;
@@ -100,4 +113,8 @@ p {
 
 h3 {
     margin-top: 40px;
+}
+
+h2 {
+    margin-top: 50px;
 }

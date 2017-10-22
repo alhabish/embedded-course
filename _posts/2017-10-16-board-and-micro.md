@@ -1,6 +1,7 @@
 ---
 layout: post
 title: (4) المتحكم والبورد  Board & Microcontroller 
+last_edit: 2017-10-20
 lang: ar-SA
 comments: true
 ---
@@ -64,17 +65,16 @@ comments: true
 {% include image.html url="assets/files/article_04/pcb.jpg" border="1" %}
 
 
+## []()تحميل دليل البيانات
+دليل البيانات datasheet عبارة عن مستند أساسي ومهم يوضح مكونات القطعة الإلكترونية ومواصفاتها، والى حد ما كيفية إستخدامها. ويمكن تحميل الدليل الخاص بالمتحكم من الرابط المباشر:
 
+<http://www.ti.com/lit/gpn/tm4c123gh6pm>
 
+أو عن طريق الذهاب الى الصفحة التالية :
 
+<http://www.ti.com/product/tm4c123gh6pm>
 
+والضغط على الرابط الموضح في الصورة:
 
-
-
-
-
-
-
-
-
+{% include image.html url="assets/files/article_04/datasheet_download_link.png" border="1" %}
 
