@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(2) تنصيب البرامج اللازمة"
+title: "2. تنصيب البرامج اللازمة"
 lang: ar-SA
 comments: true
 ---

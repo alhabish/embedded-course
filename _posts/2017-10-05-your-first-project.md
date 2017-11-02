@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(3) كتابة أول مشروع في Keil uVision"
+title: "3. كتابة أول مشروع في Keil uVision"
 lang: ar-SA
 comments: true
 ---

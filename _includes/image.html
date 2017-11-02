@@ -2,7 +2,10 @@
 {% if include.description %}<caption align="bottom">{{ include.description }}</caption>{% endif %}
 <tr>
     <td style="text-align:center; align:center">
-        <img src="{{site.url}}/{{include.url}}" alt="{{ include.description }}" 
+        <img src="{{site.url}}/{{include.url}}" 
+             alt="{{ include.description }}" 
+             style="cursor: pointer;"
+             onclick="openInNewTab('{{site.url}}/{{include.url}}');"
              {% if include.width %}style="width:{{include.width}}; height:{{include.height}}"{% endif %}  />
     </td>
 </tr>

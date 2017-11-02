@@ -1,14 +1,9 @@
 ---
 layout: post
-title: (5) التعامل مع الذاكرة  Understanding Memory
+title: 5. التعامل مع الذاكرة  Understanding Memory
 lang: ar-SA
 comments: true
 ---
-
-
-<blockquote class="note">
-<p>تم تعديل المقالة السابقة بإضافة طريقة تحميل دليل البيانات datasheet</p>
-</blockquote>
 
 يوجد لدينا عدة أنواع من الذاكرة على النظام، أهمها:
 * **ROM** أو Flash memory ومساحتها 256KB. ومن الممكن أن يكون لدينا أكثر من ذاكرة ROM على النظام المدمج. وهذا الجزء الذي يحفظ فيه الكود code والثوابت constants. والبيانات المحفوظه في هذه الذاكره لا تمسح في حالة إعادة تشغيل المتحكم non-volotile. 

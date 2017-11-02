@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (4) المتحكم والبورد  Board & Microcontroller 
+title: 4. المتحكم والبورد  Board & Microcontroller 
 last_edit: 2017-10-20
 lang: ar-SA
 comments: true
