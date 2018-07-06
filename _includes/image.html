@@ -1,5 +1,6 @@
 <table {% if include.border %}style="border: 1px solid #CACFD2"{% endif %}>
 {% if include.description %}<caption align="bottom">{{ include.description }}</caption>{% endif %}
+{% if include.source %}<caption align="bottom" style="text-transform: lowercase; font-style: italic; font-size: 0.8em">source: {{ include.source }}</caption>{% endif %}
 <tr>
     <td style="text-align:center; align:center">
         <img src="{{site.url}}/{{include.url}}" 
