@@ -65,7 +65,7 @@ while ((STCTRL_R & 0x00010000) == 0) {}
 
 ويمكن العثور على هذا جدول وبشكل مفصل في ملف startup_TM4C123.s.
 
-{% include image.html url="assets/files/article_14/__vectors.png" border="1" %}
+{% include image.html url="assets/files/article_14/vectors.png" border="1" %}
 
 حيث يمكن استخدام العناصر الموجودة في العمود الثاني كأسماء ISR في البرنامج بينما نستخدم الـ IRQ لإعداد المقاطعة في البرنامج. 
 
