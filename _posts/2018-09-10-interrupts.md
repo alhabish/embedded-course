@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 14. Interrupts 
+title: 14. المُقاطعات  Interrupts 
 lang: ar-SA
 comments: true
 ---
@@ -81,7 +81,7 @@ while ((STCTRL_R & 0x00010000) == 0) {}
 ويوفر لنا الكومبايلر في Keil µVision الدوال التالية التي تستدعي الأوامر السابقة:
 
 ```c
-void __enable_irq(void) // CPSIE I;
+void __enable_irq(void)  // CPSIE I;
 void __disable_irq(void) // CPSID I;
 ```
 
@@ -267,7 +267,7 @@ void interrupts_wait_for(void){
 
 ## []() تهيئة المقاطعات
 
-أول ثلاث خطوات في عملية تهيئة المقاطعات تتعلق بتحديد نقطة trigger المقاطعة، حيث أنه لدينا 5 خيارات بالإمكان للمقاطعة أن تعمل عندها:
+أول ثلاث خطوات في عملية تهيئة المقاطعات تتعلق بتحديد نقطة بدء trigger المقاطعة، حيث أنه لدينا 5 خيارات بالإمكان للمقاطعة أن تعمل عندها:
 
 * المستوى المنخفض  low level
 * المستوى العالي high level
@@ -276,6 +276,8 @@ void interrupts_wait_for(void){
 * كلا الحافتين الصاعدة والنازلة
 
 {% include image.html url="assets/files/article_14/signal_edges.png" border="1" %}
+
+وفيما يلي خطوات التهيئة التي يجب علينا إتباعها:
 
 ---
 
@@ -365,8 +367,6 @@ NVIC_PRI7_R
 
 {% include image.html url="assets/files/article_14/28293031.png" border="1" %}
 
-{% include image.html url="assets/files/article_14/prin_register_bit_field.png" border="1" %}
-
 وبذلك يكون الحقل المتحكم في أولوية المقاطعة رقم 30 هو INTC (بت 23:21).
 
 وسنقوم بإعطاء هذه المقاطعة الأولوية 3:
@@ -383,7 +383,7 @@ __6. تمكين المقاطعات للمنفذ__
 
 {% include image.html url="assets/files/article_14/EN0.png" border="1" %}
 
-وتفاصيل السجل:
+وتفاصيل السجل موجودة في ص 142 من دليل البيانات:
 
 {% include image.html url="assets/files/article_14/EN0_R.png" border="1" %}
 
@@ -452,8 +452,6 @@ switch (GPIO_PORTF_DATA_R & 0x11)
   case 0x10: // SW2 pressed only
     GPIO_PORTF_DATA_R = LED_GREEN;
     break;
-  default:
-    GPIO_PORTF_DATA_R &= ~(LED_RED|LED_BLUE|LED_GREEN);
 }  
 ```
 
